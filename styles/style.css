@@ -3,19 +3,22 @@
 }
 html{
     width: 100%;
-
 }
 body{
     width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: "Roboto Light", serif;
+    size: 60px;
+    line-height: 24px;
+    font-size: 20px;
 }
-
 .flex-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 30px;
     text-align: center;
-
 }
 .flex-container div{
     width: 33.33%;
@@ -23,57 +26,103 @@ body{
     background-color: green;
     text-align: center;
 }
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .logo,.navbar,.login{
         width: 100%;
     }
 }
-@media only screen  and (max-height: 1000px){
+@media only screen  and (max-height: 900px){
 
 
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 50% 50%;
     width: 100%;
-
+    grid-template-columns: 50% 50%;
 }
 .grid-items{
 
-    height: 500px;
-    background-color: green;
-    margin: 5px 5px;
+
+    /*margin: 5px 5px; */
 }
-@media  only screen  and (max-width: 1000px){
+
+.grid-container #item1{
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 15%;
+    background-color: dodgerblue;
+}
+#item2 img{
+    max-width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.grid-container #item3{
+    background-color: darkblue;
+  }
+#item3 img{
+    max-width: 90%;
+    max-height: 90%;
+    padding-top: 10%;
+    padding-left: 20%;
+    text-align: center;
+}
+#item4{
+    background-color: dodgerblue;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 1%;
+}
+@media  screen  and (max-width: 900px){
 .grid-container{
     display: grid;
     grid-template-columns: 100%;
 }
+    #item3 img{
+        text-align: center;
+    }
+    #item4{
+        text-align: left;
+        padding-left: 10%;
+        padding-bottom: 10%;
+        background-color: darkblue;
+    }
 
 }
 .text-container{
+    width: 100%;
+    height: 100%;
     text-align: center;
-    padding: 0 100px;
+    padding: 10% 20%;
 }
-.grid-container #item1,#item4{
-    text-align: center;
-    padding: 0 20px;
-    background-color: aqua;
+@media screen  and (max-width: 900px){
+    .text-container{
+        text-align: center;
+        padding-right: 10%;
+        padding-left: 10%;
+
+    }
+
 }
+
 /*=================================================================================*/
 .contact-container{
     display: grid;
-    grid-template-columns: 60% 40%;
+    width: 100%;
+    grid-template-columns: 50% 50%;
 }
-@media  only screen  and (max-width: 1000px) {
+@media  only screen  and (max-width: 900px) {
     .contact-container {
         display: grid;
+        padding-left: 1%;
+        padding-right: 1%;
         grid-template-columns: 100%;
     }
 }
 .contact-items{
     height: 500px;
-    margin: 5px 5px;
+
 
 }
 .contact-container #forms{
@@ -83,14 +132,15 @@ body{
 .contact-container #contacts{
     border: mediumslateblue;
     background-color: mediumslateblue;
-
 }
 .start-container{
     width: 100%;
-    height: 200px;
+    padding-top: 5%;
+    padding-bottom: 5%;
     text-align: center;
+    background-color: lightgray;
 }
-@media  only screen  and (max-width: 1000px){
+@media  screen  and (max-width: 900px){
     .start-container button {
         background-color: dodgerblue;
         border: 1px solid dodgerblue;
@@ -115,18 +165,20 @@ body{
     font-size: medium;
 }
 .social-container{
-   width: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
     text-align: center;
-    height: 200px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: beige;
 }
 .social-center{
-    width: 50%;
-    height: 200px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 17% 17% 17% 17% 17%;
+    background-color: azure;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     text-align: center;
-
-
 }
 
 
@@ -138,4 +190,6 @@ body{
 .footer-container{
     width: 100%;
     text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
