@@ -3,102 +3,229 @@
 }
 html{
     width: 100%;
-
 }
 body{
     width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: "Roboto Light", serif;
+    size: 40px;
+    line-height: 24px;
+    font-size: 20px;
 }
-
 .flex-container{
     display: flex;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 30px;
+    font-size: 20px;
+    padding: 1% ;
+    background-color: dodgerblue;
+    justify-content: space-around;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+}
+.flex-container > div{
+
     text-align: center;
 
 }
-.flex-container div{
-    width: 33.33%;
-    height: 100px;
-    background-color: green;
-    text-align: center;
-}
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .logo,.navbar,.login{
         width: 100%;
     }
 }
-@media only screen  and (max-height: 1000px){
+.main{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 55%;
+    height: auto;
+    background-color: dodgerblue;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-bottom: 1%;
+}
+.main #image{
+    max-width: 100%;
+    height: auto;
+    background-color: dodgerblue;
+}
+.main #text{
+    padding: 35% 5%;
+    text-align: justify;
+}
+@media screen and (max-width: 900px) {
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        /*grid-template-columns: 100%;*/
+        order: revert;
+    }
+
+}
+@media screen  and (max-width: 375px){
+    .main{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        flex-direction: column-reverse;
+        order: revert;
+    }
+    .main #image{
+        max-width: 100%;
+        height: 100%;
+        background-color: dodgerblue;
+        position: absolute;
+    }
 
 
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 50% 50%;
     width: 100%;
+    grid-template-columns: 50% 50%;
+
+    /*padding: 5%;*/
+}
+.item1 h1{
+    padding-top: 5%;
+    padding-bottom: 5%;
+
 
 }
-.grid-items{
-
-    height: 500px;
-    background-color: green;
-    margin: 5px 5px;
+.grid-container #item1{
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 15%;
+    background-color: dodgerblue;
 }
-@media  only screen  and (max-width: 1000px){
+#item2 img{
+    max-width: 100%;
+    height: auto; /*100%; */
+    text-align: center;
+}
+.grid-container #item3{
+    background-color: darkblue;
+  }
+#item3 img{
+    max-width: 90%;
+    max-height: 90%;
+    padding-top: 10%;
+    padding-left: 20%;
+    text-align: center;
+}
+#item4{
+    background-color: dodgerblue;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 1%;
+}
+@media  screen  and (max-width: 900px){
 .grid-container{
     display: grid;
     grid-template-columns: 100%;
 }
-
+    #item3 img{
+        text-align: center;
+    }
+    #item4{
+        text-align: left;
+        padding-left: 10%;
+        padding-bottom: 10%;
+        background-color: darkblue;
+    }
 }
 .text-container{
+    width: 100%;
     text-align: center;
-    padding: 0 100px;
+    padding: 5% 20%;
 }
-.grid-container #item1,#item4{
-    text-align: center;
-    padding: 0 20px;
-    background-color: aqua;
+@media screen  and (max-width: 900px){
+    .text-container{
+        text-align: center;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
 }
+
 /*=================================================================================*/
 .contact-container{
     display: grid;
+    width: 100%;
     grid-template-columns: 60% 40%;
+    grid-template-rows: 50%;
+
 }
-@media  only screen  and (max-width: 1000px) {
-    .contact-container {
+#entete{
+    background-color: dodgerblue;
+}
+
+#forms img{
+    max-width: 100%;
+    height: auto;
+}
+#forms h1{
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#contacts{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40%;
+    padding-top: 40%;
+    background-color: white;
+}
+#contacts #phones {
+    background-color: green;
+    height: 55%;
+    margin-bottom: 5%;
+}
+#contacts #search{
+    margin-top: 1%;
+    height: 55%;
+    background-color: cadetblue;
+}
+@media  only screen  and (max-width: 900px) {
+    .contact-container{
         display: grid;
         grid-template-columns: 100%;
     }
-}
-.contact-items{
-    height: 500px;
-    margin: 5px 5px;
-
-}
-.contact-container #forms{
-    border: 1px solid white;
-    background-color: aliceblue;
-}
-.contact-container #contacts{
-    border: mediumslateblue;
-    background-color: mediumslateblue;
-
+    #forms{
+        text-align: center;
+        padding-bottom: 1%;
+    }
+    #contacts{
+        display: grid;
+    }
 }
 .start-container{
     width: 100%;
+    padding: 5% 1%;
     text-align: center;
+    background-color: lightgray;
+    margin-top: 5%;
+    /*margin-bottom: 5%; */
 }
-@media  only screen  and (max-width: 1000px){
+.start-container h2{
+    padding: 1%;
+}
+@media  screen  and (max-width: 900px){
+    .start-container{
+        text-align: center;
+        padding: 5% 5%;
+    }
     .start-container button {
         background-color: dodgerblue;
         border: 1px solid dodgerblue;
-        width: 200px;
-        height: 45px;
+        width: 10%; /* 200px */
+        height: 5%; /* 45px*/
+        padding-bottom: 2%;
         border-radius: 3px;
         text-align: center;
     }
-
 }
 .start-container button {
     background-color: dodgerblue;
@@ -113,14 +240,30 @@ body{
     text-decoration: none;
     font-size: medium;
 }
-
-
-
-
-
-
+.social-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: white;
+    border-style: outset;
+}
+.social-center{
+    width: 100%;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 10% 10% 10% 10% 10%;
+    grid-column-gap: initial;
+    text-align: center;
+    padding-left: 30%;
+}
 
 .footer-container{
     width: 100%;
     text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
 }
