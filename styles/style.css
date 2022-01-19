@@ -6,8 +6,6 @@ html{
 }
 body{
     width: 100%;
-    padding-left: 1%;
-    padding-right: 1%;
     font-family: "Roboto Light", serif;
     size: 40px;
     line-height: 24px;
@@ -31,6 +29,9 @@ body{
     text-align: center;
 
 }
+#entete{
+    background-color: dodgerblue;
+}
 @media screen and (max-width: 900px) {
     .logo,.navbar,.login{
         width: 100%;
@@ -44,26 +45,34 @@ body{
     background-color: dodgerblue;
     padding-right: 8%;
     padding-left: 8%;
-    padding-bottom: 1%;
+    padding-bottom: 5%;
 }
-.main #image{
+#image img{
     max-width: 100%;
     height: auto;
     background-color: dodgerblue;
 }
-.main #text{
+#text{
     padding: 35% 5%;
     text-align: justify;
+    color: white;
 }
+
+
+/* Desktop */
 @media screen and (max-width: 900px) {
     .main{
         display: flex;
         flex-direction: column-reverse;
-        /*grid-template-columns: 100%;*/
         order: revert;
     }
+    #image{
+        max-width: 100%;
+        height: 100%
 
+    }
 }
+/* mobile */
 @media screen  and (max-width: 375px){
     .main{
         display: flex;
@@ -72,69 +81,89 @@ body{
         flex-direction: column-reverse;
         order: revert;
     }
-    .main #image{
+    .main-items #image{
         max-width: 100%;
         height: 100%;
         background-color: dodgerblue;
         position: absolute;
     }
-
-
+    .main-items#text h1,p{
+        text-align: center;
+    }
 }
 .grid-container{
     display: grid;
     width: 100%;
-    grid-template-columns: 50% 50%;
-
-    /*padding: 5%;*/
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+#item1{
+    text-align: left;
+    background-color: dodgerblue;
+    padding: 10% 5% 10% 18%;
+    color: white;
 }
 .item1 h1{
-    padding-top: 5%;
-    padding-bottom: 5%;
-
-
+    padding-top: 7%;
+    padding-bottom: 7%;
 }
-.grid-container #item1{
-    text-align: left;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 15%;
-    background-color: dodgerblue;
+.item1 h4{
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
+
 #item2 img{
     max-width: 100%;
-    height: auto; /*100%; */
+    height: auto;
     text-align: center;
 }
-.grid-container #item3{
+#item3{
+    padding: 10% 5% 10% 1%;
     background-color: darkblue;
-  }
+}
 #item3 img{
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    height: auto;
     padding-top: 10%;
-    padding-left: 20%;
+    padding-left: 15%;
+    padding-right: 5%;
     text-align: center;
 }
 #item4{
     background-color: dodgerblue;
-    padding-top: 10%;
-    padding-left: 10%;
-    padding-right: 1%;
+    padding: 15%;
+    color: white;
+    text-align: left;
 }
+#item4 h1{
+    padding-left: 3%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+
+}
+#item4 li{
+    list-style: none;
+
+}
+
 @media  screen  and (max-width: 900px){
 .grid-container{
     display: grid;
     grid-template-columns: 100%;
 }
     #item3 img{
+        max-width: 100%;
+        height: auto;
         text-align: center;
     }
     #item4{
-        text-align: left;
-        padding-left: 10%;
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+        background-color: #4169E1;
+        /*padding-left: 10%;
         padding-bottom: 10%;
-        background-color: darkblue;
+         */
     }
 }
 .text-container{
@@ -148,64 +177,38 @@ body{
         padding-right: 10%;
         padding-left: 10%;
     }
+
 }
 
 /*=================================================================================*/
 .contact-container{
     display: grid;
     width: 100%;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 50%;
-
-}
-#entete{
-    background-color: dodgerblue;
-}
-
-#forms img{
-    max-width: 100%;
     height: auto;
 }
-#forms h1{
-    width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-#contacts{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 40%;
-    padding-top: 40%;
-    background-color: white;
-}
-#contacts #phones {
-    background-color: green;
-    height: 55%;
-    margin-bottom: 5%;
-}
-#contacts #search{
-    margin-top: 1%;
-    height: 55%;
-    background-color: cadetblue;
-}
+
+
+
+
 @media  only screen  and (max-width: 900px) {
     .contact-container{
         display: grid;
         grid-template-columns: 100%;
     }
-    #forms{
-        text-align: center;
-        padding-bottom: 1%;
-    }
     #contacts{
         display: grid;
+        grid-template-columns: 100%;
+    }
+    .address{
+        display: grid;
+        grid-template-columns: 100%;
     }
 }
 .start-container{
     width: 100%;
     padding: 5% 1%;
     text-align: center;
-    background-color: lightgray;
+    background-color: #D3D3D3;
     margin-top: 5%;
     /*margin-bottom: 5%; */
 }
@@ -217,29 +220,19 @@ body{
         text-align: center;
         padding: 5% 5%;
     }
-    .start-container button {
-        background-color: dodgerblue;
-        border: 1px solid dodgerblue;
-        width: 10%; /* 200px */
-        height: 5%; /* 45px*/
-        padding-bottom: 2%;
-        border-radius: 3px;
-        text-align: center;
-    }
+
 }
-.start-container button {
+.start-container a{
     background-color: dodgerblue;
     border: 1px solid dodgerblue;
-    width: 200px;
-    height: 45px;
+    width: 500px;
+    padding: 10px 30px;
     border-radius: 3px;
     text-align: center;
-}
-.start-container button a{
-    color: white;
     text-decoration: none;
-    font-size: medium;
+    color: white;
 }
+
 .social-container{
     display: grid;
     width: 100%;
@@ -259,11 +252,9 @@ body{
     text-align: center;
     padding-left: 30%;
 }
-
 .footer-container{
     width: 100%;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 5% 1%;
 
 }
