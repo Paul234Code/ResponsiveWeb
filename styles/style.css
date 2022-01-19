@@ -29,8 +29,50 @@ body{
     text-align: center;
 
 }
-#entete{
+.login{
     background-color: dodgerblue;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.hidden img{
+    display: none;
+}
+.login svg{
+    filter: invert(100%);
+}
+@media screen  and (max-width: 900px){
+    .navbar, .login input,.login button {
+        display: none;
+    }
+    .flex-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 25% 45% 30%;
+       /* padding-right: 1%;
+        padding-left: 1%; */
+        padding-bottom: 0;
+    }
+    .login svg{
+       padding-bottom: 5%;
+        padding-top: 5%;
+        padding-left: 10%;
+
+
+    }
+    .hidden img{
+        max-width: 100%;
+        height: auto;
+        visibility: visible;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    .logo svg{
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+
+
 }
 @media screen and (max-width: 900px) {
     .logo,.navbar,.login{
