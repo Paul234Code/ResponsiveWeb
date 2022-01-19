@@ -8,7 +8,7 @@ body{
     width: 100%;
     font-family: "Roboto Light", serif;
     size: 40px;
-    line-height: 24px;
+    line-height: 30px;
     font-size: 20px;
 }
 .flex-container{
@@ -53,12 +53,28 @@ body{
     background-color: dodgerblue;
 }
 #text{
-    padding: 35% 5%;
+    padding: 40% 5%;
     text-align: justify;
     color: white;
 }
+.main-items#text a{
+    text-decoration: none;
+    padding: 2% 10%;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
 
+}
+.main-items#text p{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.main-items#text h1{
+    font-size: 80px;
+    width: 100%;
 
+}
 /* Desktop */
 @media screen and (max-width: 900px) {
     .main{
@@ -69,7 +85,6 @@ body{
     #image{
         max-width: 100%;
         height: 100%
-
     }
 }
 /* mobile */
@@ -161,9 +176,6 @@ body{
         height: auto;
         text-align: center;
         background-color: #4169E1;
-        /*padding-left: 10%;
-        padding-bottom: 10%;
-         */
     }
 }
 .text-container{
@@ -184,25 +196,76 @@ body{
 .contact-container{
     display: grid;
     width: 100%;
+    grid-template-columns: 55% 45%;
     height: auto;
 }
+.contact-items#forms{
+    padding: 10% 5% 10% 15%;
+    height: auto;
+}
+.contact-items#forms h1,p{
+    padding-left: 1%;
+}
+.contact-items#forms img{
+    max-width: 100%;
+    height: auto;
+}
+.contact-items#numbers {
+    display: grid;
+    grid-template-columns: 100%;
+    height: auto;
+
+    padding-top: 35%;
+}
+.contact-items#numbers #phones{
+    background-color: #87CEFA;
+    padding-top: 5%;
+    padding-bottom: 5%;
 
 
+}
+.contact-items#numbers #search{
+    background-color: #D3D3D3;
+    padding-top: 5%;
+    padding-bottom: 5%;
 
+}
 
 @media  only screen  and (max-width: 900px) {
+
+    .contact-container > .contact-items#numbers {
+        display: grid;
+        width: 100%;
+        padding-top: 5%;
+        grid-template-columns: 100%;
+        grid-row-gap: 10%;
+        padding-bottom: 5%;
+        height: auto;
+    }
+    .contact-container > .contact-items#forms{
+        padding-left: 1%;
+        padding-right: 1%;
+        text-align: center;
+    }
     .contact-container{
         display: grid;
         grid-template-columns: 100%;
+        height: auto;
     }
-    #contacts{
-        display: grid;
-        grid-template-columns: 100%;
+    .contact-items#numbers #phones{
+        background-color: #87CEFA;
+        padding-top: 30%;
+        padding-bottom: 30%;
+        border-radius: 1%;
     }
-    .address{
-        display: grid;
-        grid-template-columns: 100%;
+    .contact-items#numbers #search{
+        background-color: #D3D3D3;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        border-radius: 1%;
+        margin-bottom: 10%;
     }
+
 }
 .start-container{
     width: 100%;
