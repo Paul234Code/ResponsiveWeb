@@ -8,7 +8,7 @@ body{
     width: 100%;
     font-family: "Roboto Light", serif;
     size: 40px;
-    line-height: 30px;
+    /*line-height: 30px;*/
     font-size: 20px;
 }
 .flex-container{
@@ -17,25 +17,49 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 20px;
-    padding: 1% ;
+    /*padding: 2% ; */
     background-color: dodgerblue;
-    justify-content: space-around;
+   /* justify-content: space-around;*/
     position: absolute;
     text-align: center;
     align-items: center;
+    justify-content: space-between;
 }
 .flex-container > div{
-
+    text-align: center;
+}
+.login{
+   display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    padding: 10px 10px;
+}
+.login #button{
     text-align: center;
 
 }
-.login{
-    background-color: dodgerblue;
-    border: 1px solid white;
-    border-radius: 5px;
+.login #input{
+    text-align: center;
+}
+.logo{
+    display: flex;
+    padding: 10px 10px;
+
 }
 .hidden img{
+    max-width: 100%;
+    height: auto;
     display: none;
+}
+.navbar{
+    display: flex;
+    height: inherit;
+    padding: 1%;
+}
+.navbar a{
+    padding: 10px 10px;
+    text-decoration: none;
+    color: white;
 }
 .login svg{
     filter: invert(100%);
@@ -47,38 +71,37 @@ body{
     .flex-container{
         display: grid;
         width: 100%;
-        grid-template-columns: 25% 45% 30%;
-       /* padding-right: 1%;
-        padding-left: 1%; */
+        grid-template-columns: 70% 30%;
+       padding-right: 1%;
+        padding-left: 1%;
+        text-align: center;
         padding-bottom: 0;
     }
-    .login svg{
+    .logo{
+        display: flex;
+        padding: 10px 10px;
+
+    }
+    .login#button svg{
        padding-bottom: 5%;
         padding-top: 5%;
         padding-left: 10%;
+    }
 
-
+    .logo svg{
+        float: right;
+        padding-bottom: 5%;
+        padding-top: 5%;
+        padding-left: 20%;
     }
     .hidden img{
         max-width: 100%;
         height: auto;
         visibility: visible;
-        padding-bottom: 5%;
-        padding-top: 5%;
-    }
-    .logo svg{
-        padding-bottom: 5%;
-        padding-top: 5%;
-    }
-
-
-
-}
-@media screen and (max-width: 900px) {
-    .logo,.navbar,.login{
-        width: 100%;
+        float: left;
     }
 }
+
 .main{
     display: grid;
     width: 100%;
@@ -106,16 +129,13 @@ body{
     border: 1px solid white;
     border-radius: 5px;
     text-align: center;
-
 }
 .main-items#text p{
     margin-top: 10%;
     margin-bottom: 10%;
 }
 .main-items#text h1{
-    font-size: 80px;
     width: 100%;
-
 }
 /* Desktop */
 @media screen and (max-width: 900px) {
@@ -127,6 +147,9 @@ body{
     #image{
         max-width: 100%;
         height: 100%
+    }
+    #text{
+        text-align: center;
     }
 }
 /* mobile */
@@ -188,36 +211,73 @@ body{
 }
 #item4{
     background-color: dodgerblue;
-    padding: 15%;
+    padding: 10%;
     color: white;
     text-align: left;
 }
 #item4 h1{
-    padding-left: 3%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 
 }
-#item4 li{
+#item4 ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#item4 ul .liste-item {
     list-style: none;
+    width: 100%;
 
 }
+#item4 li span{
+    font-size: xxx-large;
+}
+#item4 #liste-item1 span{
+    padding-left: 57%;
+}
+#item4 #liste-item2 span{
+    padding-left: 46%;
+}
+#item4 #liste-item3 span{
+    padding-left: 60%;
+}
 
+/* Desktop*/
 @media  screen  and (max-width: 900px){
-.grid-container{
-    display: grid;
-    grid-template-columns: 100%;
-}
+    .grid-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
     #item3 img{
         max-width: 100%;
         height: auto;
         text-align: center;
     }
     #item4{
-        max-width: 100%;
+        width: 100%;
         height: auto;
-        text-align: center;
         background-color: #4169E1;
+    }
+    #item4 ul .liste-item {
+        list-style: none;
+        width: 100%;
+
+    }
+    #item4 li span{
+        font-size: xxx-large;
+    }
+    #item4 #liste-item1 span{
+        /*padding-left: 50%; */
+        float: right;
+    }
+    #item4 #liste-item2 span{
+        /*padding-left: 20%;*/
+        float: right;
+    }
+    #item4 #liste-item3 span{
+        /*padding-left: 40%; */
+        float: right;
     }
 }
 .text-container{
